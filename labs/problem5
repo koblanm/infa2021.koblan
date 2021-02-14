@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int x;
+    bool stop = false;
+    cin >> x;
+    int a,b,c,d;
+    for(a = 0; a <= sqrt(x) && !stop; a++){
+        for(b = 0; b <= sqrt(x) && !stop; b++){
+            for(c = 0; c <= sqrt(x) && !stop; c++){
+                for(d = 0; d <= sqrt(x) && !stop; d++){
+                    if (a*a + b*b + c*c + d*d == x){
+                        stop = true;
+                        cout << a << endl;
+                        cout << b << endl;
+                        cout << c << endl;
+                        cout << d << endl;
+                    }
+                }
+            }
+        }
+    }
+
+
+    return 0;
+}
