@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double a,b,c;
+    double M;
+    cin >> a >> b >> c;
+
+    if (b < c){
+        M = b;
+        b = c;
+        c = M;
+    }
+    if (a < c){
+        M = a;
+        a = c;
+        c = M;
+    }
+   if (a < b){
+        M = a;
+        a = b;
+        b = M;
+   }
+
+   if (b + c <= a) {
+        cout << "impossible";
+   } else
+   if (a > sqrt(b*b+c*c)) {
+        cout << "obtuse";
+   }
+   if (a == sqrt(b*b+c*c)) {
+        cout << "right";
+   }
+   if (a < sqrt(b*b+c*c)) {
+        cout << "acute";
+   }
+
+    return 0;
+}
